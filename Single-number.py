@@ -13,21 +13,35 @@ Example 2:
 Input: [4,1,2,1,2]
 Output: 4
 '''
+from collections import defaultdict
 
-
-'''
-class Solution(object):
-    def singleNumber(self, single):      
-        for i in len(single):
-            if single.count(i)==1:
+class MySolution1(object):      #Mi primera solucion al ejercicio
+    def mysingleNumber1(self,nums):
+        for i in nums:
+            if nums.count(i)==1:
                 return i
-        print ("No single number was found in this list")
-    A=[1,1,2,2,3]
-    t=singleNumber(A)
-    print(t)
-    '''
- 
-class Solution1(object):
+        return ("no single number found in list\n")
+l1=[1,1,2,3,3]
+l2=[1,1,2,2,3,3]
+
+z1=MySolution1()
+print(z1.mysingleNumber1(l1))
+print(z1.mysingleNumber1(l2))
+print("prueba de segunda solucion hecha por mi")
+class Mysolution2(object):      #Mi segunda solucion al ejercicio, disminuyendo el time complexity usando una hash table
+    def mysingleNumber2(self,nums):
+        hash_table=defaultdict(int)
+        for i in nums:
+            hash_table[i]+=1
+        print(hash_table)
+        for i in hash_table:
+            if hash_table[i]==1:
+                return i
+
+z2=Mysolution2()
+print(z2.mysingleNumber2(l1))
+
+class Solution1(object):        #solucion entregada por la pagina
     def singleNumber(self, nums):
         """
         :type nums: List[int]
