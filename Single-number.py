@@ -33,13 +33,16 @@ class Mysolution2(object):      #Mi segunda solucion al ejercicio, disminuyendo 
         hash_table=defaultdict(int)
         for i in nums:
             hash_table[i]+=1
-        print(hash_table)
         for i in hash_table:
             if hash_table[i]==1:
                 return i
 
 z2=Mysolution2()
 print(z2.mysingleNumber2(l1))
+
+'''Todavia debo entender como usar bien el diccionario predeterminado y el use de las clases y sub clases'''
+
+
 
 class Solution1(object):        #solucion entregada por la pagina
     def singleNumber(self, nums):
