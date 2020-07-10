@@ -6,6 +6,6 @@ class Solution(object):
         :rtype: List[List[str]]
         """
         table=defaultdict(list)
-        print(table)
+        
 z=Solution()
-z.groupAnagrams(["abc","adc","erb"])
+print(z.groupAnagrams(["abc","adc","erb","bce"]))
